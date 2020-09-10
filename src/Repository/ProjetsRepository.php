@@ -47,4 +47,18 @@ class ProjetsRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findTwo() 
+    {
+        return $this->createQueryBuilder('s') /* 's' est un alias */
+            ->andWhere('s.id > :val') /* on cherhce un id supérieur à une valeur */
+            ->setParameter('val', '0') /* on donne la valeur */
+            ->orderBy('s.id', 'ASC') /* tri en ordre décroissant */
+            ->setMaxResults(2) /* on sélectionne 6 résultats maximum */
+            ->getQuery() /* requête */
+            ->getResult() /* résultats */
+        ;
+    }
+
+
+
 }

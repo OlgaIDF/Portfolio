@@ -5,36 +5,26 @@
 {% block body %}
 
 <section class="projet">
-   <div class="container p-5">
+   <div class="container-fluid">
 
       <div class="row py-5">
           <div class="col-12">
-              <h2>Projets</h2>
+              <h2 class="text-center py-2">Projets</h2>
           </div>
       </div>
 
       <div class="row">
-
-<!-- Card -->
+{% for projet in projets %}
+<div class="col-6 p-3">
 <div class="card">
-
-   <!-- Card image -->
-   <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
- 
-   <!-- Card content -->
-   <div class="card-body">
- 
-     <!-- Title -->
-     <h4 class="card-title"><a>Card title</a></h4>
-     <!-- Text -->
-     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-       content.</p>
-    
- 
-   </div>
- 
+     <img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Card image cap">
+    <div class="card-body">
+     <h5 class="card-title"><a>{{  projet.nomSite }} | {{  projet.outil }}</a></h5>
+         <p class="card-text">{{  projet.type }} - {{ projet.description}}</p>
+       </div>
+</div>
  </div>
- <!-- Card -->
+ {% endfor %}
 </div>
 
 <div class="row py-5">
@@ -43,14 +33,23 @@
     </div>
 </div>
 
+</section>
+
+<section class="competences">
+    <div class="row py-5">
+        <div class="col-12">
+            <h2 class="text-center py-2">Compétences</h2>
+        </div>
+    </div>
+    <div class="row py-5">
+    
 
 
 
+    </div>
+</section>
 
 </div>
-
-
-</section>
 
 {% endblock %}
 
