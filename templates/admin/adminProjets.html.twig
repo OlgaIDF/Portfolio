@@ -1,0 +1,38 @@
+{% extends 'baseAdmin.html.twig' %} {% block title %}projets{% endblock %} {%
+block body %}
+{{ parent() }}
+<div class="col-10 p-5">
+  <h2>Liste des projets</h2>
+  <table class="table table-bordered table-hover table-sm ">
+    <thead>
+      <tr>
+        <th scope="col">N°</th>
+        <th scope="col">Nom de site</th>
+        <th scope="col">Outil</th>
+        <th scope="col">Type</th>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for projet in projets %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ projet.nomSite }}</td>
+        <td>{{ projet.outil }}</td>
+        <td>{{ projet.type }}</td>
+        <td>{{ projet.description }}</td>
+        <td>{{ projet.image }}</td>
+
+        <td>
+          <a href="{{ path('projet_update', {'id':projet.id})}}">Modifier</a> |
+          <a href="{{ path('projet_delete', {'id':projet.id})}}">Supprimer</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <a href="{{ path('projet_create')}}" class="btn btn-outline-dark float-right">Ajouter</a>
+</div>
+{% endblock %}
