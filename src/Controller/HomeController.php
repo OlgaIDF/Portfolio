@@ -15,7 +15,7 @@ class HomeController extends AbstractController
     public function index(ProjetsRepository $projetsRepository)
     {
        
-       $projets = $projetsRepository->findTwo();
+       $projets = $projetsRepository->findAll();
        
         return $this->render('home/index.html.twig', [
             'projets' => $projets,

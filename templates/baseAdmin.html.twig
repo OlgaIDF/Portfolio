@@ -13,15 +13,16 @@
       <title>Olha NEKRASHEVYCH - {% block title %}base{% endblock %}</title>
 
 </head>
+
 <body>
    <header>
       {% for label, messages in app.flashes(['success', 'danger']) %}
-                {% for message in messages %}
-                    <div class="flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endfor %}
+      {% for message in messages %}
+      <div class="flash-{{ label }} p-3 fixed-top bg-{{ label }} text-white text-center">
+         {{ message }}
+      </div>
+      {% endfor %}
+      {% endfor %}
       <div class="jumbotron jumbotron-fluid text-center">
          <div class="container">
             <h1>Olha NEKRASHEVYCH</h1>
@@ -33,22 +34,22 @@
    <div class="container-fluid">
       <div class="row">
 
-          {% block body %}
-          
-              <div class="col-2 bg-light text-white py-3 ">
-                  <ul>
-                      <li><a href="{{ path('admin') }}">Accueil admin</a></li>
-                      <li><a href="{{ path('admin_projets') }}">Projets</a></li>
-                      <li><a href="">Competences</a></li>
-                      <li><a href="{{ path('home') }}">Retour au site</a></li>
-                      <li><a href="">D&eacute;connexion</a></li>
-                  </ul>
-              </div>
-          
-          {% endblock %}
+         {% block body %}
+
+         <div class="col-2 bg-light text-white py-3 ">
+            <ul>
+               <li><a href="{{ path('admin') }}">Accueil admin</a></li>
+               <li><a href="{{ path('admin_projets') }}">Projets</a></li>
+               <li><a href="">Competences</a></li>
+               <li><a href="{{ path('home') }}">Retour au site</a></li>
+               <li><a href="{{ path('app_logout') }}">D&eacute;connexion</a></li>
+            </ul>
+         </div>
+
+         {% endblock %}
 
       </div>
-  </div>
+   </div>
 
    <footer class="border">
       <div class="container-fluid">
@@ -61,13 +62,9 @@
       </div>
       </div>
    </footer>
-
-
-
    <script src="
         https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
       </script>
-
    {% block javascripts %}{% endblock %}
 </body>
 

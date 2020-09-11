@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="site Portfolio">
-        <meta="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="autor" content="Olha NEKRASHEVYCH">
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-            <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oxygen&display=swap" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-            <title>Olha NEKRASHEVYCH - {% block title %}base{% endblock %}</title>
-    
-    </head>
-    <body>
-        <header>
-           
-                        <div class="headerText text-center">
-                            <h1 class="display-4">Olha NEKRASHEVYCH</h1>
-                            <h2 class="text-muted">Développeur Web et Web Mobile</h2>
-                        </div>
-                    
-        </header>
-{% block body %}{% endblock %} 
-<footer class="border">
-<div class="container-fluid">
-    <div class="row text-center ">
-        <div class="col-md-6 p-5">
-            <p class="font-weight-bold">Quelques liens</p>
-            
-            <ul>
-                <li><a href="{{ path('home') }}">Accueil</a></li>
-                <li><a href="{{ path('admin') }}">Admin</a></li>
-            </ul>
-        </div>
-        <div class="col-md-6 p-5">
-            <p class="font-weight-bold">Coordonn&eacute;es</p>
-            
-          
-                        <p>2 avenue des Cévennes</p>
-                        <p>91940 Les Ulis</p>
-                        <p>07.67.86.68.21</p>
-                        <p>olha.idf@gmail.com</p>
-        </div>
-        <div class="col-12 p-3 font-weight-light">
-            {{ copyright|raw }}
-        </div>
-    </div>
-</div>         
-        </footer>
-       
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="site Portfolio">
+    <meta="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="Olha NEKRASHEVYCH">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oxygen&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <title>Olha NEKRASHEVYCH - {% block title %}base{% endblock %}</title>
 
-        <script src="
+</head>
+
+<body>
+    <header>
+
+        <div class="headerText text-center">
+            <h1 class="display-4">Olha NEKRASHEVYCH</h1>
+            <h2 class="text-muted">Développeur Web et Web Mobile</h2>
+        </div>
+
+    </header>
+    {% block body %}{% endblock %}
+    <footer class="border">
+        <div class="container-fluid">
+            <div class="row text-center ">
+                <div class="col-md-6 p-5">
+                    <p class="font-weight-bold">Quelques liens</p>
+
+                    <ul>
+                        <li><a href="{{ path('home') }}">Accueil</a></li>
+                        <li><a href="{{ path('admin') }}">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 p-5">
+                    <p class="font-weight-bold">Coordonn&eacute;es</p>
+
+                    <p>2 avenue des Cévennes</p>
+                    <p>91940 Les Ulis</p>
+                    <p>07.67.86.68.21</p>
+                    <p>olha.idf@gmail.com</p>
+                </div>
+                <div class="col-12 p-3 font-weight-light">
+                    {{ copyright|raw }}
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="
         https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
         </script>
-    
-        {% block javascripts %}{% endblock %}
-    </body>
+
+    {% block javascripts %}{% endblock %}
+</body>
+
 </html>

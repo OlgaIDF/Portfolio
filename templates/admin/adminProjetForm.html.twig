@@ -4,11 +4,11 @@
 
 {% block body %}
 
-    {{ parent() }}
-    <div class="col-10 p-3">
-      <h2>Formulaire</h2>
-      {{ form_start(formulaireProjet) }}
-      {{ form_end(formulaireProjet) }}
-  </div>
+{{ parent() }}
+<div class="col-10 p-3">
+  <h2>Formulaire</h2>
+  {{ form_start(formulaireProjet) }}
+  {{ form_end(formulaireProjet) }}
+</div>
 
 {% endblock %}
