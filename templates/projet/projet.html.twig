@@ -1,0 +1,52 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}accueil{% endblock %}
+
+{% block body %}
+
+<section class="projet">
+    <div class="container-fluid">
+
+        <div class="row py-5">
+            <div class="col-12">
+                <h2 class="text-center py-2">Projets</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for projet in projets %}
+            <div class="col-6 p-3">
+                <div class="card">
+                    <img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Printscreen de site {{  projet.nomSite }}">
+                    <div class="card-body">
+                        <h5 class="card-title"><a>{{  projet.nomSite }} | {{  projet.outil }}</a></h5>
+                        <p class="card-text">{{  projet.type }} - {{ projet.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row py-5">
+            <div class="col-12 text-center">
+                <a href="{{ path('home')}}" class="btn btn-outline-dark">Voir moins</a>
+            </div>
+        </div>
+
+</section>
+
+<section class="competences">
+    <div class="row py-5">
+        <div class="col-12">
+            <h2 class="text-center py-2">Compétences</h2>
+        </div>
+
+    </div>
+    <div class="row py-5">
+    </div>
+</section>
+</div>
+
+{% endblock %}
+
+

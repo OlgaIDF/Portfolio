@@ -7,18 +7,18 @@ use App\Repository\CompetencesRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController extends AbstractController
+class ProjetController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/projet", name="projet")
      */
     public function index(ProjetsRepository $projetsRepository, CompetencesRepository $competencesRepository)
     {
        
-       $projets = $projetsRepository->findTwo();
+       $projets = $projetsRepository->findAll();
        $competences = $competencesRepository->findAll();
 
-        return $this->render('home/index.html.twig', [
+        return $this->render('projet/projet.html.twig', [
             'projets' => $projets,
             'competences' => $competences,
         ]);
