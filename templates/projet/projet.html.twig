@@ -4,6 +4,14 @@
 {% block title %}accueil{% endblock %}
 
 {% block body %}
+<header>
+
+    <div class="headerText text-center">
+        <h1 class="display-4">Olha NEKRASHEVYCH</h1>
+        <h2 class="text-muted">Développeur Web et Web Mobile</h2>
+    </div>
+
+</header>
 
 <section class="projet">
     <div class="container-fluid">
@@ -40,13 +48,57 @@
         <div class="col-12">
             <h2 class="text-center py-2">Compétences</h2>
         </div>
-
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 p-5">
+                    <p class="font-weight-bold text-center">Technologies</p>
+                    <hr class="my-3">
+                    {% for competence in competences %}
+                                        {% if  competence.type  == 'Technologies' %}
+                    <ul>
+                        <li>
+                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
+                            {{competence.nom}}</li>
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="col-md-4 p-5">
+                    <p class="font-weight-bold text-center">Frameworks / bibliothèques</p>
+                    <hr class="my-3">
+                    {% for competence in competences %}
+                    {% if  competence.type  == 'Frameworks / bibliothèques' %}
+                    <ul>
+                        <li>
+                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
+                            {{competence.nom}}
+                        </li>
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="col-md-4 p-5">
+                    <p class="font-weight-bold text-center">CMS</p>
+                    <hr class="my-3">
+                    {% for competence in competences %}
+                    {% if  competence.type  == 'CMS' %}
+                    <ul>
+                        <li>
+                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
+                            {{competence.nom}}</li>
+                    </ul>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row py-5">
     </div>
 </section>
 </div>
-
 {% endblock %}
+
+
 
 
