@@ -1,18 +1,21 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}accueil{% endblock %}
-
 {% block body %}
+<header>
 
+    <div class="headerText text-center">
+        <h1 class="display-4">Olha NEKRASHEVYCH</h1>
+        <h2 class="text-muted">Développeur Web et Web Mobile</h2>
+    </div>
+
+</header>
 <section class="projet">
     <div class="container-fluid">
-
         <div class="row py-5">
             <div class="col-12">
                 <h2 class="text-center py-2">Projets</h2>
             </div>
         </div>
-
         <div class="row">
             {% for projet in projets %}
             <div class="col-6 p-3">
@@ -27,30 +30,25 @@
             </div>
             {% endfor %}
         </div>
-
         <div class="row py-5">
             <div class="col-12 text-center">
                 <a href="{{ path('projet')}}" class="btn btn-outline-dark">Voir toutes les projets</a>
             </div>
         </div>
-
 </section>
-
 <section class="competences">
     <div class="row py-5">
         <div class="col-12">
             <h2 class="text-center py-2">Compétences</h2>
         </div>
-
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold">Technologies</p>
+                    <p class="font-weight-bold text-center">Technologies</p>
+                    <hr class="my-3">
                     {% for competence in competences %}
-                    {% if  competence.type  == 'Technologies' %}
+                                        {% if  competence.type  == 'Technologies' %}
                     <ul>
-
                         <li>
                             <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
                             {{competence.nom}}</li>
@@ -59,8 +57,8 @@
                     {% endfor %}
                 </div>
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold">Frameworks / bibliothèques</p>
-
+                    <p class="font-weight-bold text-center">Frameworks / bibliothèques</p>
+                    <hr class="my-3">
                     {% for competence in competences %}
                     {% if  competence.type  == 'Frameworks / bibliothèques' %}
                     <ul>
@@ -71,34 +69,27 @@
                     </ul>
                     {% endif %}
                     {% endfor %}
-
                 </div>
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold">CMS</p>
-
+                    <p class="font-weight-bold text-center">CMS</p>
+                    <hr class="my-3">
                     {% for competence in competences %}
                     {% if  competence.type  == 'CMS' %}
                     <ul>
-
                         <li>
                             <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
                             {{competence.nom}}</li>
                     </ul>
                     {% endif %}
                     {% endfor %}
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
     <div class="row py-5">
     </div>
 </section>
 </div>
-
 {% endblock %}
 
 
