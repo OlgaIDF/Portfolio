@@ -21,23 +21,31 @@
         <div class="container-fluid">
             <div class="row text-center ">
                 <div class="col-md-6 p-5">
-                    <p class="font-weight-bold">Quelques liens</p>
+                    <p class="font-weight-bold">{% trans %}Quelques liens{% endtrans %}</p>
 
                     <ul>
-                        <li><a href="{{ path('home') }}">Accueil</a></li>
-                        <li><a href="{{ path('admin') }}">Admin</a></li>
-                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                        <li><a href="{{ path('contact') }}">Contact</a></li>
-                      
+                        <li><a href="{{ path('home') }}">{% trans %}Accueil{% endtrans %}</a></li>
+                        <li><a href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a></li>
+                        <li><a href="{{ path('app_login') }}">{% trans %}Connexion{% endtrans %}</a></li>
+                        <li><a href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a></li>
+                      <li>
+                        {% for locale in locales%} 
+                        {% if locale != app.request.locale %}
+                        <a href = "{{ path('change-locale', {'locale': locale}) }}"><img class="m-2" src="{{ asset('img/'~locale~'.png') }}" alt="{{locale}}"></a>
+                        {% endif %}
+                        {% endfor %}
+                      </li>
                     </ul>
                 </div>
                 <div class="col-md-6 p-5">
-                    <p class="font-weight-bold">Coordonn&eacute;es</p>
+                    <ul>
+                    <li class="font-weight-bold">{% trans %}Coordonn&eacute;es{% endtrans %}</p>
 
-                    <p>2 avenue des Cévennes</p>
-                    <p>91940 Les Ulis</p>
-                    <p>07.67.86.68.21</p>
-                    <p>olha.idf@gmail.com</p>
+                    <li>{% trans %}2 avenue des Cévennes{% endtrans %}</li>
+                    <li>{% trans %}91940 Les Ulis{% endtrans %}</li>
+                    <li>07.67.86.68.21</li>
+                    <li>olha.idf@gmail.com</li>
+                  </ul>  
                 </div>
                 <div class="col-12 p-3 font-weight-light">
                     {{ copyright|raw }}

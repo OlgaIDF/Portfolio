@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="ua" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="9VIRLC6" resname="Olha NEKRASHEVYCH">
+        <source>Olha NEKRASHEVYCH</source>
+        <target>Ольга НЕКРАШЕВИЧ</target>
+      </trans-unit>
+      <trans-unit id="rMVOvIZ" resname="Développeur Web et Web Mobile">
+        <source>Développeur Web et Web Mobile</source>
+        <target>Розробник веб- і мобільних сайтів</target>
+      </trans-unit>
+      <trans-unit id="IrGNHcF" resname="Accueil admin">
+        <source>Accueil admin</source>
+        <target>Головна адмін</target>
+      </trans-unit>
+      <trans-unit id="Da1htjG" resname="Projets">
+        <source>Projets</source>
+        <target>Проекти</target>
+      </trans-unit>
+      <trans-unit id="ntGPRQo" resname="Competences">
+        <source>Competences</source>
+        <target>Навички</target>
+      </trans-unit>
+      <trans-unit id="I9OTi17" resname="Utilisateurs">
+        <source>Utilisateurs</source>
+        <target>Користувачі</target>
+      </trans-unit>
+      <trans-unit id="MO9ehf1" resname="Retour au site">
+        <source>Retour au site</source>
+        <target>Повернутися на сайт</target>
+      </trans-unit>
+      <trans-unit id="X33HOsB" resname="D&amp;eacute;connexion">
+        <source>D&amp;eacute;connexion</source>
+        <target></target>
+      </trans-unit>
+      <trans-unit id="akpKKLm" resname="Formulaire de contact">
+        <source>Formulaire de contact</source>
+        <target>Контактна форма </target>
+      </trans-unit>
+      <trans-unit id="hyM4pLN" resname="Voir toutes les projets">
+        <source>Voir toutes les projets</source>
+        <target>Переглянути всі проекти</target>
+      </trans-unit>
+      <trans-unit id="QTkjKFo" resname="Compétences">
+        <source>Compétences</source>
+        <target>Навички</target>
+      </trans-unit>
+      <trans-unit id="a5_pXR5" resname="Technologies">
+        <source>Technologies</source>
+        <target>Технології</target>
+      </trans-unit>
+      <trans-unit id="Wr3hvqD" resname="Frameworks / bibliothèques">
+        <source>Frameworks / bibliothèques</source>
+        <target>Фреймворки / бібліотеки</target>
+      </trans-unit>
+      <trans-unit id="bJz9BXw" resname="Vous &amp;ecirc;tes connect&amp;eacute; avec l'identifiant">
+        <source>Vous &amp;ecirc;tes connect&amp;eacute; avec l'identifiant</source>
+        <target><![CDATA[Ви ввійшли за допомогою імені користувача>]]></target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Увійти</target>
+      </trans-unit>
+      <trans-unit id="0dSeruD" resname="Quelques liens">
+        <source>Quelques liens</source>
+        <target>Деякі посилання</target>
+      </trans-unit>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Головна</target>
+      </trans-unit>
+      <trans-unit id="wcIksDz" resname="Admin">
+        <source>Admin</source>
+        <target>Адмін</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Контакт</target>
+      </trans-unit>
+      <trans-unit id=".W3sZP8" resname="Coordonn&amp;eacute;es">
+        <source>Coordonn&amp;eacute;es</source>
+        <target>Контактна інформація</target>
+      </trans-unit>
+      <trans-unit id="PjMHRg_" resname="2 avenue des Cévennes">
+        <source>2 avenue des Cévennes</source>
+        <target>2 avenue des Cévennes</target>
+      </trans-unit>
+      <trans-unit id="idUFIkW" resname="91940 Les Ulis">
+        <source>91940 Les Ulis</source>
+        <target>91940 Les Ulis</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

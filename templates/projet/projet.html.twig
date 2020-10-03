@@ -7,8 +7,8 @@
 <header>
 
     <div class="headerText text-center">
-        <h1 class="display-4">Olha NEKRASHEVYCH</h1>
-        <h2 class="text-muted">Développeur Web et Web Mobile</h2>
+        <h1 class="display-4">{% trans %}Olha NEKRASHEVYCH{% endtrans %}</h1>
+        <h2 class="text-muted">{% trans %}Développeur Web et Web Mobile{% endtrans %}</h2>
     </div>
 
 </header>
@@ -18,7 +18,7 @@
 
         <div class="row py-5">
             <div class="col-12">
-                <h2 class="text-center py-2">Projets</h2>
+                <h2 class="text-center py-2">{% trans %}Projets{% endtrans %}</h2>
             </div>
         </div>
 
@@ -37,7 +37,7 @@
         </div>
         <div class="row py-5">
             <div class="col-12 text-center">
-                <a href="{{ path('home')}}" class="btn btn-outline-dark">Voir moins</a>
+                <a href="{{ path('home')}}" class="btn btn-outline-dark">{% trans %}Voir moins{% endtrans %}</a>
             </div>
         </div>
 
@@ -46,12 +46,12 @@
 <section class="competences">
     <div class="row py-5">
         <div class="col-12">
-            <h2 class="text-center py-2">Compétences</h2>
+            <h2 class="text-center py-2">{% trans %}Compétences{% endtrans %}</h2>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">Technologies</p>
+                    <p class="font-weight-bold text-center">{% trans %}Technologies{% endtrans %}</p>
                     <hr class="my-3">
                     {% for competence in competences %}
                                         {% if  competence.type  == 'Technologies' %}
@@ -64,7 +64,7 @@
                     {% endfor %}
                 </div>
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">Frameworks / bibliothèques</p>
+                    <p class="font-weight-bold text-center">{% trans %}Frameworks / bibliothèques{% trans %}</p>
                     <hr class="my-3">
                     {% for competence in competences %}
                     {% if  competence.type  == 'Frameworks / bibliothèques' %}

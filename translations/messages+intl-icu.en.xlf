@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="9VIRLC6" resname="Olha NEKRASHEVYCH">
+        <source>Olha NEKRASHEVYCH</source>
+        <target>Olha NEKRASHEVYCH</target>
+      </trans-unit>
+      <trans-unit id="rMVOvIZ" resname="Développeur Web et Web Mobile">
+        <source>Développeur Web et Web Mobile</source>
+        <target>Web and Mobile Developer</target>
+      </trans-unit>
+      <trans-unit id="IrGNHcF" resname="Accueil admin">
+        <source>Accueil admin</source>
+        <target>Home admin</target>
+      </trans-unit>
+      <trans-unit id="Da1htjG" resname="Projets">
+        <source>Projets</source>
+        <target>Projects</target>
+      </trans-unit>
+      <trans-unit id="ntGPRQo" resname="Competences">
+        <source>Competences</source>
+        <target>Skills</target>
+      </trans-unit>
+      <trans-unit id="I9OTi17" resname="Utilisateurs">
+        <source>Utilisateurs</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="MO9ehf1" resname="Retour au site">
+        <source>Retour au site</source>
+        <target>Back to site</target>
+      </trans-unit>
+      <trans-unit id="X33HOsB" resname="D&amp;eacute;connexion">
+        <source>D&amp;eacute;connexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="akpKKLm" resname="Formulaire de contact">
+        <source>Formulaire de contact</source>
+        <target>Contact form</target>
+      </trans-unit>
+      <trans-unit id="hyM4pLN" resname="Voir toutes les projets">
+        <source>Voir toutes les projets</source>
+        <target>See all projects</target>
+      </trans-unit>
+      <trans-unit id="QTkjKFo" resname="Compétences">
+        <source>Compétences</source>
+        <target>Skills</target>
+      </trans-unit>
+      <trans-unit id="a5_pXR5" resname="Technologies">
+        <source>Technologies</source>
+        <target>Technologies</target>
+      </trans-unit>
+      <trans-unit id="Wr3hvqD" resname="Frameworks / bibliothèques">
+        <source>Frameworks / bibliothèques</source>
+        <target>Frameworks / library</target>
+      </trans-unit>
+      <trans-unit id="bJz9BXw" resname="Vous &amp;ecirc;tes connect&amp;eacute; avec l'identifiant">
+        <source>Vous &amp;ecirc;tes connect&amp;eacute; avec l'identifiant</source>
+        <target>You are logged in with the username </target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="0dSeruD" resname="Quelques liens">
+        <source>Quelques liens</source>
+        <target>Some links</target>
+      </trans-unit>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="wcIksDz" resname="Admin">
+        <source>Admin</source>
+        <target>Admin</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id=".W3sZP8" resname="Coordonn&amp;eacute;es">
+        <source>Coordonn&amp;eacute;es</source>
+        <target>Contact information</target>
+      </trans-unit>
+      <trans-unit id="PjMHRg_" resname="2 avenue des Cévennes">
+        <source>2 avenue des Cévennes</source>
+        <target>2 avenue des Cévennes</target>
+      </trans-unit>
+      <trans-unit id="idUFIkW" resname="91940 Les Ulis">
+        <source>91940 Les Ulis</source>
+        <target>91940 Les Ulis</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

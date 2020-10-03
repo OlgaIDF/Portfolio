@@ -16,11 +16,11 @@
         
                 {% if app.user %}
                     <div class="mb-3 alert alert-success text-center">
-                        Vous &ecirc;tes connect&eacute; avec l'identifiant {{ app.user.username }} (<a href="{{ path('app_logout') }}" class="text-danger">d&eacute;connexion</a>).
+                        {% trans %}Vous &ecirc;tes connect&eacute; avec l'identifiant {% endtrans %}{{ app.user.username }} (<a href="{{ path('app_logout') }}" class="text-danger">d&eacute;connexion</a>).
                     </div>
                 {% endif %}
         
-                <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+                <h1 class="h3 mb-3 font-weight-normal">{% trans %}Connexion{% endtrans %}</h1>
         
                 <label for="inputEmail">Email</label>
                 <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
@@ -44,7 +44,7 @@
                 #}
         
                 <button class="btn btn-outline-dark float-right" type="submit">
-                    Connexion
+                    {% trans %}Connexion{% endtrans %}
                 </button>
             </form>
         </div>
