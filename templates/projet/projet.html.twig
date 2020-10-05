@@ -1,8 +1,5 @@
-
 {% extends 'base.html.twig' %}
-
 {% block title %}accueil{% endblock %}
-
 {% block body %}
 <header>
 
@@ -12,21 +9,19 @@
     </div>
 
 </header>
-
 <section class="projet">
     <div class="container-fluid">
-
         <div class="row py-5">
             <div class="col-12">
                 <h2 class="text-center py-2">{% trans %}Projets{% endtrans %}</h2>
             </div>
         </div>
-
         <div class="row">
             {% for projet in projets %}
             <div class="col-6 p-3">
                 <div class="card">
-                    <img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Printscreen de site {{  projet.nomSite }}">
+                    <img class="card-img-top" src="./img/projets/{{ projet.image }}"
+                        alt="Printscreen de site {{  projet.nomSite }}">
                     <div class="card-body">
                         <h5 class="card-title"><a>{{  projet.nomSite }} | {{  projet.outil }}</a></h5>
                         <p class="card-text">{{  projet.type }} - {{ projet.description}}</p>
@@ -40,9 +35,7 @@
                 <a href="{{ path('home')}}" class="btn btn-outline-dark">{% trans %}Voir moins{% endtrans %}</a>
             </div>
         </div>
-
 </section>
-
 <section class="competences">
     <div class="row py-5">
         <div class="col-12">
@@ -64,7 +57,7 @@
                     {% endfor %}
                 </div>
                 <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">{% trans %}Frameworks / bibliothèques{% trans %}</p>
+                    <p class="font-weight-bold text-center">{% trans %}Frameworks / bibliothèques{% endtrans %}</p>
                     <hr class="my-3">
                     {% for competence in competences %}
                     {% if  competence.type  == 'Frameworks / bibliothèques' %}

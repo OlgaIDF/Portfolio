@@ -8,6 +8,7 @@ use App\Repository\CompetencesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class AdminCompetencesController extends AbstractController
 {
@@ -30,12 +31,36 @@ class AdminCompetencesController extends AbstractController
     {
         $competence = new Competences();
 
-        $form = $this->createForm(competenceType::class, $competence);
+        $form = $this->createForm(CompetenceType::class, $competence);
         $form->handleRequest($request);
+
+        // récupèrer les informations du picto
+        $picto = $form['picto']->getData();
 
         if ($form->isSubmitted()) {
 
             if ($form->isValid()) {
+
+                $nomPicto = md5(uniqid()); // nom unique
+                $extensionPicto = $picto->guessExtension(); // récupérer l'extension du picto
+                $newNomPicto = $nomPicto . '.' . $extensionPicto; // recomposer un nom du picto
+
+                try { // on tente d'importer l'image
+
+
+                    $picto->move(
+                        $this->getParameter('dossier_picto_competences'),
+                        $newNomPicto
+                    );
+                } catch (FileException $e) {
+                    $this->addFlash(
+                        'danger',
+                        'Une erreur est survenue lors de l\'importation du picto'
+                    );
+                }
+
+                $competence->setPicto($newNomPicto); // nom pour la base de données
+
                 $manager = $this->getDoctrine()->getManager();
                 $manager->persist($competence);
                 $manager->flush();
@@ -58,17 +83,51 @@ class AdminCompetencesController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/admin/competences/update-{id}", name="competence_update")
      */
-    public function updatecompetence(CompetencesRepository $competencesRepository, $id, Request $request)
+    public function updateCompetence(CompetencesRepository $competencesRepository, $id, Request $request)
     {
         $competence = $competencesRepository->find($id);
 
+        // récupérer nom et chemin picto
+        $oldNomPicto = $competence->getPicto();
+        $oldCheminPicto = $this->getParameter('dossier_picto_competences') . '/' . $oldNomPicto;
+
+
         $form = $this->createForm(CompetenceType::class, $competence);
         $form->handleRequest($request);
+        // récupèrer les informations du picto
+        $picto = $form['picto']->getData();
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            // supprimer ancienne picto
+            if ($oldNomPicto != null) {
+                unlink($oldCheminPicto);
+            }
+
+
+            $nomPicto = md5(uniqid()); // nom unique
+            $extensionPicto = $picto->guessExtension(); // récupérer l'extension du picto
+            $newNomPicto = $nomPicto . '.' . $extensionPicto; // recomposer un nom du picto
+
+            try { // on tente d'importer le picto                                      
+                $picto->move(
+                    $this->getParameter('dossier_picto_competences'),
+                    $newNomPicto
+                );
+            } catch (FileException $e) {
+                $this->addFlash(
+                    'danger',
+                    'Une erreur est survenue lors de l\'importation du picto'
+                );
+            }
+
+            $competence->setPicto($newNomPicto); // nom pour la base de données
+
+
             $manager = $this->getDoctrine()->getManager();
             $manager->persist($competence);
             $manager->flush();
@@ -90,6 +149,14 @@ class AdminCompetencesController extends AbstractController
     public function deletecompetence(CompetencesRepository $competencesRepository, $id)
     {
         $competence = $competencesRepository->find($id);
+        // récupérer le nom et le chemin de l'image à supprimer
+        $nomPicto = $competence->getPicto();
+        $cheminPicto = $this->getParameter('dossier_picto_competences') . '/' . $nomPicto;
+
+        // supprimer img1
+        if ($nomPicto != null) {
+            unlink($cheminPicto);
+        }
 
         $manager = $this->getDoctrine()->getManager();
         $manager->remove($competence);

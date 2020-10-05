@@ -6,6 +6,7 @@
 parameters:
     app.locales: [fr, en, ua]
     app.copyright: 'Copyright &copy; 2020 | Olha NEKRASHEVYCH'
+    dossier_picto_competences: '%kernel.project_dir%/public/img/competences'
     
 services:
     # default configuration for services in *this* file

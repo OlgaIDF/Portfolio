@@ -61,7 +61,7 @@ class AdminProjetsController extends AbstractController
     /**
      * @Route("/admin/projets/update-{id}", name="projet_update")
      */
-    public function updateprojet(ProjetsRepository $projetsRepository, $id, Request $request)
+    public function updateProjet(ProjetsRepository $projetsRepository, $id, Request $request)
     {
         $projet = $projetsRepository->find($id);
 
