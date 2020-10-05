@@ -26,8 +26,17 @@ header h1{
 
 header h2{
    font-family: 'Oxygen', sans-serif;
+
   
 }
+section h2{
+   font-weight: 700;
+   text-shadow: 2px 2px 2px  #3d6332;
+   letter-spacing: 0.2em;
+   color:#6c757d;
+  
+}
+
 .headerText{
  
    position: absolute;
@@ -49,3 +58,10 @@ footer{
 .card-text{
    font-size: smaller;
 }
+footer a {
+   color:#3d6332!important;
+  }
+
+footer a:hover{
+       color: #3d6332;
+   }

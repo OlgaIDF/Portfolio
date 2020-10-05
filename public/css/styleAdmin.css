@@ -25,3 +25,12 @@ header h2{
   min-height: 100vh;
 }
 
+a {
+   color:#3d6332!important;
+  
+}
+
+a:hover{
+       color: #3d6332;
+   }
+

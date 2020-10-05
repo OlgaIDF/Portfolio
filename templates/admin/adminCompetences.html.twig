@@ -1,8 +1,8 @@
-{% extends 'baseAdmin.html.twig' %} {% block title %}competences{% endblock %}
+{% extends 'baseAdmin.html.twig' %} {% block title %}compétences{% endblock %}
 {% block body %}
 {{ parent() }}
 <div class="col-10 p-5">
-  <h2 class="pb-3">Liste des competences</h2>
+  <h2 class="pb-3">Liste des compétences</h2>
   <table class="table table-bordered table-hover table-sm">
     <thead>
       <tr>
@@ -20,8 +20,6 @@
         <td>{{ competence.type }}</td>
         <td>{{ competence.nom }}</td>
         <td>{{ competence.picto }}</td>
-        
-
         <td>
           <a href="{{ path('competence_update', { id: competence.id }) }}"
             ><svg
@@ -67,7 +65,6 @@
   <a
     href="{{ path('competence_create') }}"
     class="btn btn-outline-dark float-right"
-    >Ajouter</a
-  >
+    >Ajouter</a>
 </div>
 {% endblock %}
