@@ -1,97 +1,127 @@
 {% extends 'base.html.twig' %}
-{% block title %}accueil{% endblock %}
-{% block body %}
-<header>
-
-    <div class="headerText text-center">
-        <h1 class="display-4">{% trans %}Olha NEKRASHEVYCH{% endtrans %}</h1>
-        <h2 class="text-muted">{% trans %}Développeur Web et Web Mobile{% endtrans %}</h2>
-    </div>
-
-</header>
-<section class="projet">
-    <div class="container-fluid">
-        <div class="row py-5">
-            <div class="col-12">
-                <h2 class="text-center py-2">{% trans %}Projets{% endtrans %}</h2>
-            </div>
-        </div>
-        <div class="row">
-            {% for projet in projets %}
-            <div class="col-6 p-3">
-                <div class="card">
-                    <img class="card-img-top" src="./img/projets/{{ projet.image }}"
-                        alt="Printscreen de site {{  projet.nomSite }}">
-                    <div class="card-body">
-                        <h5 class="card-title"><a>{{  projet.nomSite }} | {{  projet.outil }}</a></h5>
-                        <p class="card-text">{{  projet.type }} - {{ projet.description}}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="row py-5">
-            <div class="col-12 text-center">
-                <a href="{{ path('projet')}}" class="btn btn-outline-dark">{% trans %}Voir toutes les projets{% endtrans %}</a>
-            </div>
-        </div>
-</section>
-<section class="competences">
-    <div class="row py-5">
-        <div class="col-12">
-            <h2 class="text-center py-2">{% trans %}Compétences{% endtrans %}</h2>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">{% trans %}Technologies{% endtrans %}</p>
-                    <hr class="my-3">
-                    {% for competence in competences %}
-                                        {% if  competence.type  == 'Technologies' %}
-                    <ul>
-                        <li>
-                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
-                            {{competence.nom}}</li>
-                    </ul>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">{% trans %}Frameworks / bibliothèques{% endtrans %}</p>
-                    <hr class="my-3">
-                    {% for competence in competences %}
-                    {% if  competence.type  == 'Frameworks / bibliothèques' %}
-                    <ul>
-                        <li>
-                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
-                            {{competence.nom}}
-                        </li>
-                    </ul>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="col-md-4 p-5">
-                    <p class="font-weight-bold text-center">CMS</p>
-                    <hr class="my-3">
-                    {% for competence in competences %}
-                    {% if  competence.type  == 'CMS' %}
-                    <ul>
-                        <li>
-                            <img src="./img/competences/{{ competence.picto }}" alt="{{  competence.nom }}"> -
-                            {{competence.nom}}</li>
-                    </ul>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row py-5">
-    </div>
-</section>
-</div>
+{% block title %}accueil
 {% endblock %}
+{% block body %}
+	<header>
 
+		<div class="headerText text-center">
+			<h1 data-wow-duration="2s" class="wow animate__animated animate__fadeInLeft display-4 ">{% trans %}Olha NEKRASHEVYCH{% endtrans %}</h1>
+			<h2 data-wow-delay="1s" class="wow animate__animated animate__fadeInRight text-muted">{% trans %}Développeur Web et Web Mobile{% endtrans %}</h2>
+		</div>
 
+	</header>
+	<section class="qui">
+		<div class="container-fluid">
+			<div class="row pt-5 ">
+				<div class="col-12">
+					<h2 class="text-center py-2">{% trans %}Qui suis-je?{% endtrans %}</h2>
+				</div>
+			</div>
+			<div class="row mx-5">
+				<div class="cards wow animate__animated animate__zoomIn  p-3">
+					<div class="col-6">
+						<img class="card-img-top" src="./img/monphoto.jpg" alt="Mon photo">
+					</div>
+					<div class="card-text col-6 px-5">
 
-
+						<p>{% trans %}Titulaire d'un diplôme d'ingénieur (BAC + 5) et une expérience en gestion administrative et commerciale, j'ai décidé de me reconvertir en Développement Web, domaine qui m'intéresse.{% endtrans %}
+						</p>
+						<p>{% trans %}Il y a peu de temps, j'ai terminé ma formation "Développeur Web et Web Mobile" et je recherche un poste de développeur Web. Je suis intéressé par le développement côté serveur (en particulier PHP Symfony 4/5 et MySQL){% endtrans %}
+						</p>
+						<div class="text-center pt-3">
+							<a href="CV_NekrashevychOlha .pdf" download="CV_NekrashevychOlha .pdf" class="btn btn-outline-dark ">{% trans %}Téléchargez mon CV{% endtrans %}</a>
+						</div>
+					</div>
+				</div>
+				<div></div>
+			</div>
+		</section>
+		<section class="projet">
+			<div class="container-fluid">
+				<div class="row pt-5 ">
+					<div class="col-12">
+						<h2 class="text-center py-2">{% trans %}Projets{% endtrans %}</h2>
+					</div>
+				</div>
+				<div class="row mx-5">
+					{% for projet in projets %}
+						<div class="col-6 p-3">
+							<div class="card wow animate__animated animate__zoomIn">
+								<a href="#"><img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Printscreen de site {{  projet.nomSite }}"></a>
+								<div class="card-body">
+									<h5 class="card-title">
+										<a>{{  projet.nomSite }}
+											|
+											{{  projet.outil }}</a>
+									</h5>
+									<p class="card-text">{{  projet.type }}
+										-
+										{{ projet.description}}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="row py-5">
+					<div class="col-12 text-center">
+						<a href="{{ path('projet')}}" class="btn btn-outline-dark">{% trans %}Voir toutes les projets{% endtrans %}</a>
+					</div>
+				</div>
+			</section>
+			<section class="competences">
+				<div class="row py-3 mx-5">
+					<div class="col-12">
+						<h2 class="text-center py-2">{% trans %}Compétences{% endtrans %}</h2>
+					</div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-4 p-3 ">
+								<p class="font-weight-bold text-center wow animate__animated animate__zoomIn">{% trans %}Technologies{% endtrans %}</p>
+								<hr class="my-3">
+								{% for competence in competences %}
+									{% if  competence.type  == 'Technologies' %}
+										<ul>
+											<li data-wow-delay="600ms" class="wow animate__animated animate__zoomIn">
+												<img src="./img/competences/{{ competence.picto }}" alt="{{ competence.nom }}">
+												-
+												{{competence.nom}}</li>
+										</ul>
+									{% endif %}
+								{% endfor %}
+							</div>
+							<div class="col-md-4 p-3">
+								<p class="font-weight-bold text-center wow animate__animated animate__zoomIn">{% trans %}Frameworks / bibliothèques{% endtrans %}</p>
+								<hr class="my-3">
+								{% for competence in competences %}
+									{% if  competence.type  == 'Frameworks / bibliothèques' %}
+										<ul>
+											<li data-wow-delay="600ms" class="wow animate__animated animate__zoomIn">
+												<img src="./img/competences/{{ competence.picto }}" alt="{{ competence.nom }}">
+												-
+												{{competence.nom}}
+											</li>
+										</ul>
+									{% endif %}
+								{% endfor %}
+							</div>
+							<div class="col-md-4 p-3">
+								<p class="font-weight-bold text-center wow animate__animated animate__zoomIn">CMS</p>
+								<hr class="my-3">
+								{% for competence in competences %}
+									{% if  competence.type  == 'CMS' %}
+										<ul>
+											<li data-wow-delay="600ms" class="wow animate__animated animate__zoomIn">
+												<img src="./img/competences/{{ competence.picto }}" alt="{{ competence.nom }}">
+												-
+												{{competence.nom}}</li>
+										</ul>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row py-5"></div>
+			</section>
+		</div>
+	{% endblock %}

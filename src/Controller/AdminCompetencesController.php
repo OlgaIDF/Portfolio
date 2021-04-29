@@ -146,7 +146,7 @@ class AdminCompetencesController extends AbstractController
     /**
      * @Route("/admin/competences/delete-{id}", name="competence_delete")
      */
-    public function deletecompetence(CompetencesRepository $competencesRepository, $id)
+    public function deleteCompetence(CompetencesRepository $competencesRepository, $id)
     {
         $competence = $competencesRepository->find($id);
         // récupérer le nom et le chemin de l'image à supprimer

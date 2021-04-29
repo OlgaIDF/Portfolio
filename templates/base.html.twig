@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="site Portfolio">
-    <meta="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="autor" content="Olha NEKRASHEVYCH">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oxygen&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <title>Olha NEKRASHEVYCH - {% block title %}base{% endblock %}</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="site Portfolio">
+		<meta="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="autor" content="Olha NEKRASHEVYCH">
+			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oxygen&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			<script src="js/wow.min.js"></script>
+			<script>
+				new WOW().init();
+			</script>
 
-</head>
+			<title>Olha NEKRASHEVYCH -
+				{% block title %}base
+				{% endblock %}
+			</title>
 
-<body>
+		</head>
 
-    {% block body %}{% endblock %}
-    <footer class="border">
-        <div class="container-fluid">
-            <div class="row text-center ">
-                <div class="col-md-6 p-5">
-                    <p class="font-weight-bold">{% trans %}Quelques liens{% endtrans %}</p>
+		<body>
 
-                    <ul>
-                        <li><a href="{{ path('home') }}">{% trans %}Accueil{% endtrans %}</a></li>
-                        <li><a href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a></li>
-                        <li><a href="{{ path('app_login') }}">{% trans %}Connexion{% endtrans %}</a></li>
-                        <li><a href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a></li>
-                      <li>
-                        {% for locale in locales%} 
-                        {% if locale != app.request.locale %}
-                        <a href = "{{ path('change-locale', {'locale': locale}) }}"><img class="m-2" src="{{ asset('img/'~locale~'.png') }}" alt="{{locale}}"></a>
-                        {% endif %}
-                        {% endfor %}
-                      </li>
-                    </ul>
-                </div>
-                <div class="col-md-6 p-5">
-                    <ul>
-                    <li class="font-weight-bold">{% trans %}Coordonn&eacute;es{% endtrans %}</p>
+			{% block body %}{% endblock %}
+			<footer class="border">
+				<div class="container-fluid">
+					<div class="row text-center ">
+						<div class="col-md-6 p-5 wow animate__animated animate__fadeInLeft">
+							<p class="font-weight-bold">{% trans %}Quelques liens{% endtrans %}</p>
 
-                    <li>{% trans %}2 avenue des Cévennes{% endtrans %}</li>
-                    <li>{% trans %}91940 Les Ulis{% endtrans %}</li>
-                    <li>07.67.86.68.21</li>
-                    <li>olha.idf@gmail.com</li>
-                  </ul>  
-                </div>
-                <div class="col-12 p-3 font-weight-light">
-                    {{ copyright|raw }}
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="
-        https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-        </script>
+							<ul>
+								<li>
+									<a href="{{ path('home') }}">{% trans %}Accueil{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path('app_login') }}">{% trans %}Connexion{% endtrans %}</a>
+								</li>
+								<li>
+									<a href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a>
+								</li>
+								<li>
+									{% for locale in locales%}
+										{% if locale != app.request.locale %}
+											<a href="{{ path('change-locale', {'locale': locale}) }}"><img class="m-2" src="{{ asset('img/'~locale~'.png') }}" alt="{{locale}}"></a>
+										{% endif %}
+									{% endfor %}
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-6 p-5 wow animate__animated animate__fadeInRight">
+							<ul>
+								<li class="font-weight-bold">{% trans %}Coordonn&eacute;es{% endtrans %}</li>
+							</p>
 
-    {% block javascripts %}{% endblock %}
-</body>
-
-</html>
+							
+							
+							<li>07.67.86.68.21</li>
+							<li>olha.idf@gmail.com</li>
+							<li>{% trans %}91940 Les Ulis{% endtrans %}</li>
+						</ul>
+					</div>
+					<div class="col-12 p-3 font-weight-light wow animate__animated animate__fadeInUp">
+						{{ copyright|raw }}
+					</div>
+				</div>
+			</div>
+		</body>
+	</head>
+</html></footer><script src="
+				        https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><script src="js/script.js"></script>{% block javascripts %}{% endblock %}</body></html>

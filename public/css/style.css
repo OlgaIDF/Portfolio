@@ -21,8 +21,9 @@ header{
    vertical-align: middle;
 }
 header h1{
-   font-family: 'EB Garamond', serif;
-   }
+ font-family: 'EB Garamond', serif; 
+
+}
 
 header h2{
    font-family: 'Oxygen', sans-serif;
@@ -31,9 +32,7 @@ header h2{
 }
 section h2{
    font-weight: 700;
-   text-shadow: 2px 2px 2px  #3d6332;
-   letter-spacing: 0.2em;
-   color:#6c757d;
+      color:#6c757d;
   
 }
 
@@ -55,8 +54,12 @@ footer{
    background-position: center;
    background-repeat: no-repeat;
 }
+.cards {
+   display: flex;
+    }
 .card-text{
    font-size: smaller;
+   text-align: justify;
 }
 footer a {
    color:#3d6332!important;

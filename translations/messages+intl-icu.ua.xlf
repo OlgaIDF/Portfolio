@@ -93,6 +93,26 @@
         <source>91940 Les Ulis</source>
         <target>91940 Les Ulis</target>
       </trans-unit>
+      <trans-unit id="uob_LSr" resname="Qui suis-je?">
+        <source>Qui suis-je?</source>
+        <target>Хто я?</target>
+      </trans-unit>
+      <trans-unit id="eOimZ4F" resname="Titulaire d'un diplôme d'ingénieur (BAC + 5) et une expérience en gestion administrative et commerciale, j'ai décidé de me reconvertir en Développement Web, domaine qui m'intéresse.">
+        <source>Titulaire d'un diplôme d'ingénieur (BAC + 5) et une expérience en gestion administrative et commerciale, j'ai décidé de me reconvertir en Développement Web, domaine qui m'intéresse.</source>
+        <target>Маючи диплом інженера  (BAC + 5) та досвід адміністративного та комерційного управління, я вирішила  перекваліфікуватися у веб-розробці - галузі, яка мене цікавить.</target>
+      </trans-unit>
+      <trans-unit id="MQ1nCgM" resname="Il y a peu de temps, j'ai terminé ma formation &quot;Développeur Web et Web Mobile&quot; et je recherche un poste de développeur Web. Je suis intéressé par le développement côté serveur (en particulier PHP Symfony 4/5 et MySQL)">
+        <source>Il y a peu de temps, j'ai terminé ma formation "Développeur Web et Web Mobile" et je recherche un poste de développeur Web. Je suis intéressé par le développement côté serveur (en particulier PHP Symfony 4/5 et MySQL)</source>
+        <target>Нещодавно я закінчила курс "Розробник веб- і веб-мобільних програм" і наразі шукаю посаду веб-розробника. Мене цікавить розробка на стороні сервера (особливо PHP Symfony 4/5 та MySQL)</target>
+      </trans-unit>
+      <trans-unit id="BpI5Tlx" resname="Téléchargez mon CV">
+        <source>Téléchargez mon CV</source>
+        <target>Завантажити моє резюме</target>
+      </trans-unit>
+      <trans-unit id="571k0_x" resname="Voir moins">
+        <source>Voir moins</source>
+        <target>Побачити менше</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
