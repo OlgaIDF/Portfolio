@@ -8,6 +8,7 @@ block body %}
       <tr>
         <th scope="col">N°</th>
         <th scope="col">Nom de site</th>
+        <th scope="col">Lien</th>
         <th scope="col">Outil</th>
         <th scope="col">Type</th>
         <th scope="col">Description</th>
@@ -20,6 +21,7 @@ block body %}
       <tr>
         <td>{{ loop.index }}</td>
         <td>{{ projet.nomSite }}</td>
+        <td>{{ projet.lien }}</td>
         <td>{{ projet.outil }}</td>
         <td>{{ projet.type }}</td>
         <td>{{ projet.description }}</td>

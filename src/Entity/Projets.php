@@ -42,6 +42,11 @@ class Projets
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $lien;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Projets
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getLien(): ?string
+    {
+        return $this->lien;
+    }
+
+    public function setLien(?string $lien): self
+    {
+        $this->lien = $lien;
 
         return $this;
     }

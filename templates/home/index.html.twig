@@ -47,7 +47,7 @@
 					{% for projet in projets %}
 						<div class="col-6 p-3">
 							<div class="card wow animate__animated animate__zoomIn">
-								<a href="#"><img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Printscreen de site {{  projet.nomSite }}"></a>
+								<a href="{{ projet.lien }}"><img class="card-img-top" src="./img/projets/{{ projet.image }}" alt="Printscreen de site {{  projet.nomSite }}"></a>
 								<div class="card-body">
 									<h5 class="card-title">
 										<a>{{  projet.nomSite }}

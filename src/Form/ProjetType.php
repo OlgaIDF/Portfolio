@@ -18,6 +18,10 @@ class ProjetType extends AbstractType
                 'required'=>true,
                 'label'=>'Nom du site'
             ])
+            ->add('lien', TextType::class,[
+                'required'=>true,
+                'label'=>'Lien'
+            ])
             ->add('outil', TextType::class,[
                 'required'=>true,
                 'label'=>'Outils'

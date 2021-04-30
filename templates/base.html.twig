@@ -42,9 +42,7 @@
 								<li>
 									<a href="{{ path('app_login') }}">{% trans %}Connexion{% endtrans %}</a>
 								</li>
-								<li>
-									<a href="{{ path('contact') }}">{% trans %}Contact{% endtrans %}</a>
-								</li>
+								
 								<li>
 									{% for locale in locales%}
 										{% if locale != app.request.locale %}
