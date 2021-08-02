@@ -3,7 +3,14 @@
 {% endblock %}
 {% block body %}
 	<header>
-
+<div class="text-right">
+{% for locale in locales%}
+										
+										{% if locale != app.request.locale %}
+											<a href="{{ path('change-locale', {'locale': locale}) }}"><img class="m-2" src="{{ asset('img/'~locale~'.png') }}" alt="{{locale}}"></a>
+										{% endif %}
+									{% endfor %}
+	</div>								
 		<div class="headerText text-center">
 			<h1 data-wow-duration="2s" class="wow animate__animated animate__fadeInLeft display-4 ">{% trans %}Olha NEKRASHEVYCH{% endtrans %}</h1>
 			<h2 data-wow-delay="1s" class="wow animate__animated animate__fadeInRight text-muted">{% trans %}Développeur Web et Web Mobile{% endtrans %}</h2>

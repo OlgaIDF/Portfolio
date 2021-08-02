@@ -48,6 +48,9 @@ section h2{
    position: relative;
   min-height: 100vh;
 }
+.mentions_legales{
+   font-size: smaller;
+}
 footer{
    background-image: url('../img/footer1.jpg') ;
    background-size: cover;

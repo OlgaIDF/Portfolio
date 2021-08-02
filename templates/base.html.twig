@@ -11,6 +11,8 @@
 			<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Oxygen&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/e2b423cc67.js" crossorigin="anonymous"></script>
 			<script src="js/wow.min.js"></script>
 			<script>
 				new WOW().init();
@@ -30,25 +32,18 @@
 				<div class="container-fluid">
 					<div class="row text-center ">
 						<div class="col-md-6 p-5 wow animate__animated animate__fadeInLeft">
-							<p class="font-weight-bold">{% trans %}Quelques liens{% endtrans %}</p>
+							<p class="font-weight-bold">{% trans %}Suivez-moi{% endtrans %}</p>
 
-							<ul>
-								<li>
-									<a href="{{ path('home') }}">{% trans %}Accueil{% endtrans %}</a>
-								</li>
-								<li>
-									<a href="{{ path('admin') }}">{% trans %}Admin{% endtrans %}</a>
-								</li>
+							
+									<a href="https://www.facebook.com/olga.kyrylenko.7"><i class="fab fa-facebook fa-lg mr-2"></i></a>
+								
+									<a href="https://www.linkedin.com/in/olha-nekrashevych-web-development/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BpRETPiO9SmqJ4zCB1UU4dQ%3D%3D"><i class="fab fa-linkedin fa-lg"></i></a>
+							
 								
 								
-								<li>
-									{% for locale in locales%}
-										{% if locale != app.request.locale %}
-											<a href="{{ path('change-locale', {'locale': locale}) }}"><img class="m-2" src="{{ asset('img/'~locale~'.png') }}" alt="{{locale}}"></a>
-										{% endif %}
-									{% endfor %}
-								</li>
-							</ul>
+								
+									
+							
 						</div>
 						<div class="col-md-6 p-5 wow animate__animated animate__fadeInRight">
 							<ul>
@@ -57,13 +52,13 @@
 
 							
 							
-							<li>07.67.86.68.21</li>
+							
 							<li>olha.idf@gmail.com</li>
-							<li>{% trans %}91940 Les Ulis{% endtrans %}</li>
+						
 						</ul>
 					</div>
 					<div class="col-12 p-3 font-weight-light wow animate__animated animate__fadeInUp">
-						{{ copyright|raw }}
+						{{ copyright|raw }} | <a href="{{ path('mentions_legales') }}">Mentions légales</a>
 					</div>
 				</div>
 			</div>

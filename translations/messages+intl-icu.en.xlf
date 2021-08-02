@@ -65,9 +65,9 @@
         <source>Connexion</source>
         <target>Login</target>
       </trans-unit>
-      <trans-unit id="0dSeruD" resname="Quelques liens">
-        <source>Quelques liens</source>
-        <target>Some links</target>
+      <trans-unit id="0dSeruD" resname="Suivez-moi">
+        <source>Suivez-moi</source>
+        <target>Follow me</target>
       </trans-unit>
       <trans-unit id="UzFhc1Y" resname="Accueil">
         <source>Accueil</source>

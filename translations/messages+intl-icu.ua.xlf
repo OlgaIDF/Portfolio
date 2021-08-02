@@ -65,9 +65,9 @@
         <source>Connexion</source>
         <target>Увійти</target>
       </trans-unit>
-      <trans-unit id="0dSeruD" resname="Quelques liens">
-        <source>Quelques liens</source>
-        <target>Деякі посилання</target>
+      <trans-unit id="0dSeruD" resname="Suivez-moi">
+        <source>Suivez-moi</source>
+        <target>Слідкуйте за мною</target>
       </trans-unit>
       <trans-unit id="UzFhc1Y" resname="Accueil">
         <source>Accueil</source>
