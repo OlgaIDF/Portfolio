@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MentionsLegalesController extends AbstractController
 {
@@ -16,4 +16,3 @@ class MentionsLegalesController extends AbstractController
         return $this->render('mentions_legales.html.twig');
     }
 }
-

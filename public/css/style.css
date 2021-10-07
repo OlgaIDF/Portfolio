@@ -1,73 +1,68 @@
-:root{
-   font-size: calc(0.5em + 1vw);
- }
-*{
-   margin: 0;
-   padding: 0;
-   text-decoration: none;
-   list-style-type: none;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   font-family: 'Lato', sans-serif;
-  
-}
-header{
-   position: relative;
-   width: 100%;
-   height: 100vh;
-   background-image: url('../img/header.jpg');
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
-   vertical-align: middle;
-}
-header h1{
- font-family: 'EB Garamond', serif; 
-
+:root {
+  font-size: calc(0.5em + 1vw);
 }
 
-header h2{
-   font-family: 'Oxygen', sans-serif;
-
-  
-}
-section h2{
-   font-weight: 700;
-      color:#6c757d;
-  
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
-.headerText{
- 
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-right: -50%;
-   transform: translate(-50%, -50%) 
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
-.projet {
-   position: relative;
-  min-height: 100vh;
+
+header h1 {
+  font-family: "EB Garamond", serif;
 }
-.mentions_legales{
-   font-size: smaller;
+
+header h2 {
+  font-family: "Oxygen", sans-serif;
 }
-footer{
-   background-image: url('../img/footer1.jpg') ;
-   background-size: cover;
-   background-position: center;
-   background-repeat: no-repeat;
+
+section h2 {
+  font-weight: 700;
+  color: #6c757d;
 }
-.cards {
-   display: flex;
-    }
-.card-text{
-   font-size: smaller;
-   text-align: justify;
+
+.headerText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
+
+.mentions_legales {
+  font-size: smaller;
+}
+
+footer {
+  background-image: url("../img/footer1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-text {
+  font-size: smaller;
+  text-align: justify;
+}
+
 footer a {
-   color:#3d6332!important;
-  }
+  color: #3d6332 !important;
+}
 
-footer a:hover{
-       color: #3d6332;
-   }
+footer a:hover {
+  color: #3d6332;
+}
